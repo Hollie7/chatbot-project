@@ -1,7 +1,53 @@
-<h2>Human-chatbot interaction study</h2>
-
-<iframe src="https://nus.syd1.qualtrics.com/jfe/form/SV_2ueD7v5LbcsbnEy" height="800px" width="600px"></iframe>
-
+<!DOCTYPE html>
+<html>
 <head>
-    <script async defer src="https://www.uchat.com.au/js/widget/vumzik792iw7fbmz/float.js"></script>
+    <title>Human-chatbot interaction study</title>
+    <style>
+        /* 添加一些全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        h2 {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 为Qualtrics调查增加一些样式 */
+        #qualtrics-iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+        
+        /* 为Uchat聊天机器人增加一些样式 */
+        #uchat-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 500px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+    </style>
 </head>
+<body>
+    <h2>Human-chatbot interaction study</h2>
+
+    <iframe id="qualtrics-iframe" src="https://nus.syd1.qualtrics.com/jfe/form/SV_5om1gq9If3fOvpc"></iframe>
+
+    <div id="uchat-container"></div>
+
+    <script>
+        var uchatWidgetConfig = {
+            container: "uchat-container",
+            widgetKey: "vumzik792iw7fbmz"
+        };
+    </script>
+    <script async defer src="https://www.uchat.com.au/js/widget/vumzik792iw7fbmz/float.js"></script>
+</body>
+</html>
